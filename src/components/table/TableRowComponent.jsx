@@ -4,11 +4,19 @@ import './TableTitleBlockStyle.css'
 
 export default function TableRowComponent(props){
     const [item, setItem] = React.useState(props)
+    const [rows, setRows] = React.useState([])
 
     React.useEffect(()=>{
-
         console.log('TableRowComponent')
         console.log(props)
+
+        let jkk = props.rows.map((x)=> {
+            let jj =  x.map((z)=>z)
+            setRows(jj);
+        })
+
+
+        console.log(rows)
         setItem(props)
     },[props])
 
@@ -17,12 +25,12 @@ export default function TableRowComponent(props){
     return(
         <>
             {
-                item.data.rows.map((row)=>(
+                rows.map((row)=>(
                         <div className="RowBlock">{
-                            row.values.map((val)=>(
+                            row.Cell.map((val)=>(
                                     <TableRowCellComponent
-                                        key ={val.id}
-                                        text={val.text}
+                                        key ={val.CellId}
+                                        text={val.Text}
                                     />
                             ))
                         }</div>

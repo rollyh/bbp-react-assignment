@@ -6,8 +6,6 @@ export default function TableTitleBlockCellComponent(props){
     const [item, setItem] = React.useState(props)
 
     React.useEffect(()=>{
-        console.log('TableTitleBlockCellComponent')
-        console.log(props)
         setItem(props)
 
     },[props])

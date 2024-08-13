@@ -17,10 +17,10 @@ export default function TableColumnBlockComponent(props){
         <>
             <div className="ColumnHeaderBlock">
                 {
-                    item.data.cols.map((col)=>(
+                    item.data.Cell.map((col)=>(
                         <TableColumnCellComponent
-                            key ={col.id}
-                            text={col.text}
+                            key ={col.CellId}
+                            text={col.Text? col.Text : '_'}
                         />
                     ))
                 }

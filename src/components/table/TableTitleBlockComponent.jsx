@@ -8,8 +8,6 @@ import './TableTitleBlockStyle.css'
 
     React.useEffect(()=>{
 
-        console.log('TableTitleBlockComponent')
-        console.log(props)
         setItem(props)
     },[props])
 
@@ -21,11 +19,12 @@ import './TableTitleBlockStyle.css'
         <>
 
         <div className="TitleBlock">
+
             {
-                item.data.headers.map((header)=>(
+                item.data.Cell.map((header)=>(
                     <TableTitleBlockCellComponent
-                        key ={header.id}
-                        text={header.text}
+                        key ={header.CellId}
+                        text={header.Text}
                         verdictStyle = {header.verdictStyle}
                     />
                 ))

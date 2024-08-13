@@ -7,7 +7,6 @@ export default function TableRowCellComponent(props){
     const [item, setItem] = React.useState(props)
 
     React.useEffect(()=>{
-
         setItem(props)
 
     },[props])
