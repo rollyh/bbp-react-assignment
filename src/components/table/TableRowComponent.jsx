@@ -31,11 +31,14 @@ export default function TableRowComponent(props){
                                     <TableRowCellComponent
                                         key ={val.CellId}
                                         text={val.Text}
+                                        name ={val.CellId}
                                     />
                             ))
                         }</div>
                 ))
             }
+
+
         </>
     )
 }
